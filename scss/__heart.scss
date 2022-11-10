@@ -1,0 +1,137 @@
+.CONTAINERHEART {
+    opacity: 0;
+    // transform: scale(0.7);
+    transition: all cubic-bezier(0.215, 0.61, 0.355, 1);
+    width: 100%;
+    height: 100%;
+    .container {
+        // position: relative;
+        width: 100%;
+        height: 100%;
+    }
+
+    .heart {
+        transform: scaleX(-1);
+        width: 100%;
+        height: 100%;
+    }
+    #pinkboard {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        display: block;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        animation: heart 1.5s ease infinite;
+    }
+
+    .element {
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #screenshot {
+        width: 250px;
+        height: 250px;
+        clip-path: path(
+            'M213.1,6.7c-32.4-14.4-73.7,0-88.1,30.6C110.6,4.9,67.5-9.5,36.9,6.7C2.8,22.9-13.4,62.4,13.5,110.9 C33.3,145.1,67.5,170.3,125,217c59.3-46.7,93.5-71.9,111.5-106.1C263.4,64.2,247.2,22.9,213.1,6.7z'
+        );
+        object-fit: cover;
+        margin: 0;
+    }
+
+    #screenshot.animation {
+        animation: heart 1.5s ease infinite;
+    }
+
+    // .fade-in {
+    //     animation: fadeIn ease 5s;
+    //     -webkit-animation: fadeIn ease 5s;
+    //     -moz-animation: fadeIn ease 5s;
+    //     -o-animation: fadeIn ease 5s;
+    //     -ms-animation: fadeIn ease 5s;
+    // }
+
+    // ANIMATION
+    @keyframes heart {
+        0% {
+            transform: scale(1);
+            /* opacity: 0.7; */
+        }
+
+        30% {
+            transform: scale(0.8);
+            /* opacity: 0.8; */
+        }
+
+        /* 60% {
+            transform: scale(1.2);
+        } */
+        100% {
+            transform: scale(1);
+            /* opacity: 1;   */
+        }
+    }
+
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+            transform: scale(0.5);
+        }
+
+        100% {
+            opacity: 1;
+
+            transform: scale(1.6);
+        }
+    }
+
+    @-moz-keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    @-webkit-keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    @-o-keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    @-ms-keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+}
+
+.CONTAINERHEART.active {
+    opacity: 1;
+}

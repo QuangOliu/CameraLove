@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./scss/style.css">
+    <title>LOVE</title>
+</head>
+
+<body>
+
+    <div id="body">
+
+        <div class="CONTAINERCAMERA">
+            <div class="camera">
+                <div class="video">
+                    <video autoplay="true" id="video-preview"></video>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="CONTAINERHEART">
+            <div class="container">
+                <div class="heart">
+                    <canvas id="pinkboard">
+                    </canvas>
+                    <div class="element">
+                        <img src="./emiu.jpg" alt="screenshot" class="fade-in animation" id="screenshot">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="cover"></div>
+    <script src="./js/camera.js"></script>
+    <script src="./js/heart.js"></script>
+</body>
+
+</html>
